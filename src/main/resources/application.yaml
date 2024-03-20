@@ -4,10 +4,23 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+    generate-ddl: true
+    properties:
+      hibernate:
+        show_sql: true
+    open-in-view: false
 
   sql:
     init:
       mode: always
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
 
 logging:
   level:
